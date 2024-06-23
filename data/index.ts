@@ -2,7 +2,7 @@ export const navItems = [
   { name: "Home", icon: "/home.svg", link: "" },
   { name: "About", icon: "/about.svg", link: "#about" },
   { name: "Projects", icon: "/projects.svg", link: "#projects" },
-  { name: "Testimonials", icon: "/testi.svg", link: "#testimonials" },
+  // { name: "Testimonials", icon: "/testi.svg", link: "#testimonials" },
   { name: "Contact", icon: "/contact.svg", link: "#contact" },
 ];
 
