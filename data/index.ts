@@ -208,14 +208,17 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
+    link: "https://www.github.com/ceavinrufus",
     img: "/git.svg",
   },
   {
     id: 2,
+    link: "https://www.twitter.com/ceavinrufus",
     img: "/twit.svg",
   },
   {
     id: 3,
+    link: "https://www.linkedin.com/in/ceavinrufus",
     img: "/link.svg",
   },
 ];
