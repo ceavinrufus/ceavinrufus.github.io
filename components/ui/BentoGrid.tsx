@@ -49,8 +49,22 @@ export const BentoGridItem = ({
 }) => {
   const [copied, setCopied] = useState(false);
 
-  const leftLists = ["NextJS", "Express", "MongoDB", "MySQL", "TailwindCSS"];
-  const rightLists = ["Firebase", "ReactJS", "NextJS", "FastAPI", "Supabase"];
+  const leftLists = [
+    "VueJS",
+    "Express",
+    "MongoDB",
+    "MySQL",
+    "TailwindCSS",
+    "VueJS",
+  ];
+  const rightLists = [
+    "Prisma",
+    "Firebase",
+    "ReactJS",
+    "NextJS",
+    "FastAPI",
+    "Prisma",
+  ];
 
   const handleCopy = () => {
     navigator.clipboard.writeText("ceavinr@gmail.com");
@@ -119,8 +133,8 @@ export const BentoGridItem = ({
 
           {/* Tech Stack */}
           {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-              <div className="flex flex-col gap-3 lg:gap-8">
+            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2 move-up">
+              <div className="flex md:mb-8 flex-col gap-3 lg:gap-8">
                 {leftLists.map((item) => (
                   <span
                     key={item}
