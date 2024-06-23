@@ -1,9 +1,9 @@
 export const navItems = [
-  { name: "Home", link: "" },
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
-  { name: "Contact", link: "#contact" },
+  { name: "Home", icon: "/home.svg", link: "" },
+  { name: "About", icon: "/about.svg", link: "#about" },
+  { name: "Projects", icon: "/projects.svg", link: "#projects" },
+  { name: "Testimonials", icon: "/testi.svg", link: "#testimonials" },
+  { name: "Contact", icon: "/contact.svg", link: "#contact" },
 ];
 
 export const gridItems = [
@@ -73,10 +73,10 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "MovieHub",
+    title: "MovieHub: All Things Movies",
     des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
     img: "/movie-hub.png",
-    iconLists: ["/re.svg", "/css.svg", "/js.svg"],
+    iconLists: ["/re.svg", "/css.svg", "/js.svg", "/swiper.svg"],
     link: "https://movie-hub-website.netlify.app/",
     github: "https://github.com/ceavinrufus/movie-hub",
   },
@@ -91,8 +91,8 @@ export const projects = [
   },
   {
     id: 3,
-    title: "My Old Portfolio Website",
-    des: "Simple and minimalist portfolio design.",
+    title: "My Previous Portfolio Website",
+    des: "My previous simple and minimalist portfolio website.",
     img: "/old-portfolio.png",
     iconLists: ["/re.svg", "/tail.svg", "/js.svg"],
     link: "https://ceavinrufus.netlify.app/",
@@ -103,7 +103,7 @@ export const projects = [
   //   title: "Yoom - Video Conferencing App",
   //   des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
   //   img: "/p2.png",
-  //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+  //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/s.svg", "/c.svg"],
   //   link: "https://github.com/ceavinrufus/zoom-clone",
   // },
 ];
@@ -111,49 +111,43 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "If you're looking to enhance your digital presence and achieve top-tier results, Ceavin is the perfect collaborator.",
+    avatar: "/anonymous.svg",
+    name: "Anonymous",
   },
 ];
 
 export const companies = [
-  {
-    id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
-  },
-  {
-    id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
-  },
-  {
-    id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
-  },
-  {
-    id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
-  },
-  {
-    id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
-  },
+  // {
+  //   id: 1,
+  //   name: "cloudinary",
+  //   img: "/cloud.svg",
+  //   nameImg: "/cloudName.svg",
+  // },
+  // {
+  //   id: 2,
+  //   name: "appwrite",
+  //   img: "/app.svg",
+  //   nameImg: "/appName.svg",
+  // },
+  // {
+  //   id: 3,
+  //   name: "HOSTINGER",
+  //   img: "/host.svg",
+  //   nameImg: "/hostName.svg",
+  // },
+  // {
+  //   id: 4,
+  //   name: "stream",
+  //   img: "/stream.svg",
+  //   nameImg: "/streamName.svg",
+  // },
+  // {
+  //   id: 5,
+  //   name: "docker.",
+  //   img: "/dock.svg",
+  //   nameImg: "/dockerName.svg",
+  // },
 ];
 
 export const workExperience = [

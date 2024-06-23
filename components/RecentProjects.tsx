@@ -21,11 +21,13 @@ const RecentProjects = () => {
               title={item.link ? "Visit\xa0website" : `View\xa0on\xa0Github`}
               href={item.link || item.github}
             >
-              <Link
-                href={item.link || item.github}
-                target="_blank"
-                className="absolute top-0 left-0 z-40 h-full w-full"
-              />
+              {(item.link || item.github) && (
+                <Link
+                  href={item.link || item.github || ""}
+                  target="_blank"
+                  className="absolute top-0 left-0 z-40 h-full w-full"
+                />
+              )}
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
@@ -34,7 +36,7 @@ const RecentProjects = () => {
                   <Image src="/bg.png" alt="bgimg" fill />
                 </div>
                 <Image
-                  src={"/projects" + item.img}
+                  src={"/assets/projectImages" + item.img}
                   alt="cover"
                   className="z-10 absolute rounded-t-xl -bottom-2 rotate-[2deg]"
                   width={368}
@@ -67,7 +69,7 @@ const RecentProjects = () => {
                       }}
                     >
                       <Image
-                        src={"/stack" + icon}
+                        src={"/assets/stackIcons" + icon}
                         fill
                         alt="icon5"
                         className="p-2"
@@ -83,7 +85,7 @@ const RecentProjects = () => {
                     >
                       {item.iconLists.length == 5 ? (
                         <Image
-                          src={"/stack" + item.iconLists[4]}
+                          src={"/assets/stackIcons" + item.iconLists[4]}
                           fill
                           alt="icon5"
                           className="p-2"
@@ -95,22 +97,24 @@ const RecentProjects = () => {
                   )}
                 </div>
 
-                <Link
-                  href={item.github}
-                  target="_blank"
-                  className="border border-white/[.2] rounded-full z-50 bg-black flex justify-center items-center p-2 gap-2"
-                >
-                  <p className="flex md:text-xs text-sm text-purple">
-                    View on Github
-                  </p>
-                  <Image
-                    height={24}
-                    width={24}
-                    src={"/git.svg"}
-                    alt="icon5"
-                    className=""
-                  />
-                </Link>
+                {item.github && (
+                  <Link
+                    href={item.github}
+                    target="_blank"
+                    className="border border-white/[.2] rounded-full z-50 bg-black flex justify-center items-center p-2 gap-2"
+                  >
+                    <p className="flex md:text-xs text-sm text-purple">
+                      View on Github
+                    </p>
+                    <Image
+                      height={24}
+                      width={24}
+                      src={"/assets/socmedIcons/git.svg"}
+                      alt="icon5"
+                      className=""
+                    />
+                  </Link>
+                )}
               </div>
             </PinContainer>
           </div>
