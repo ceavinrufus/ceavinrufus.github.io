@@ -21,6 +21,11 @@ const RecentProjects = () => {
               title={item.link ? "Visit\xa0website" : `View\xa0on\xa0Github`}
               href={item.link || item.github}
             >
+              <Link
+                href={item.link || item.github}
+                target="_blank"
+                className="absolute top-0 left-0 z-40 h-full w-full"
+              />
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
@@ -90,10 +95,10 @@ const RecentProjects = () => {
                   )}
                 </div>
 
-                <a
+                <Link
                   href={item.github}
                   target="_blank"
-                  className="border border-white/[.2] rounded-full bg-black flex justify-center items-center p-2 gap-2"
+                  className="border border-white/[.2] rounded-full z-50 bg-black flex justify-center items-center p-2 gap-2"
                 >
                   <p className="flex md:text-xs text-sm text-purple">
                     View on Github
@@ -105,7 +110,7 @@ const RecentProjects = () => {
                     alt="icon5"
                     className=""
                   />
-                </a>
+                </Link>
               </div>
             </PinContainer>
           </div>
