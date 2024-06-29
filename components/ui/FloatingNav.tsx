@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   motion,
   AnimatePresence,
@@ -23,25 +23,34 @@ export const FloatingNav = ({
 }) => {
   const { scrollYProgress } = useScroll();
   const [selected, setSelected] = useState(0);
-
   const [visible, setVisible] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
+      // Menampilkan nav saat sedang scrolling
+      setVisible(true);
 
-      if (scrollYProgress.get() < 0.05) {
-        setVisible(false);
-      } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
+      // Menghapus timer jika ada
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
       }
+
+      // Mengatur timer untuk menyembunyikan nav setelah 3 detik
+      timeoutRef.current = setTimeout(() => {
+        setVisible(false);
+      }, 3000);
     }
   });
+
+  // Menghapus timer saat komponen unmount
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
     <AnimatePresence mode="wait">
