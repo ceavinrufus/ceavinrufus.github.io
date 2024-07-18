@@ -156,7 +156,7 @@
 }
 
 .parallax__stars {
-  --parallax-speed: 320;
+  transition: transform 0.5s ease-out;
   z-index: 2;
 }
 
@@ -194,7 +194,7 @@
 }
 
 .bg-gradient-home {
-  background: linear-gradient(to bottom, #011825, 5%, #000319);
+  background: linear-gradient(to bottom, #011825, 25%, #000319);
 }
 
 @media (min-width: 1024px) {

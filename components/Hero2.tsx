@@ -1,4 +1,4 @@
-import Image from "next/image";
+import React, { useEffect, useRef } from "react";
 import Position from "./Position";
 import SpacemanCanvas from "./Spaceman";
 
@@ -7,6 +7,23 @@ const Hero2 = ({
 }: {
   scrollContainer: React.RefObject<HTMLDivElement>;
 }) => {
+  const starsRef = useRef<any>(null);
+
+  const handleScroll = () => {
+    if (starsRef.current) {
+      const scrollPosition = window.scrollY;
+      const scale = 1 + scrollPosition / 3000; // Adjust the divisor to control the zoom speed
+      starsRef.current.style.transform = `scale(${scale})`;
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <section className="parallax">
       <div className="parallax__content absolute top-[5%] sm:top-[10%] lg:top-[16%] w-full mx-auto lg:pl-[38vh] lg:pr-[30vh] xl:pl-96 xl:pr-72 2xl:px-40 3xl:px-60 flex flex-col lg:flex-row items-start z-10">
@@ -18,22 +35,8 @@ const Hero2 = ({
         </div>
       </div>
 
-      {/* <div className="parallax__planets">
-        <Image src="/assets/parallax/2Planets.svg" fill alt="" />
-      </div>
-      <div className="parallax__mountain1">
-        <Image src="/assets/parallax/3Mountain.svg" alt="" fill />
-      </div>
-      <div className="parallax__mountain2">
-        <Image src="/assets/parallax/4Mountain.svg" alt="" fill />
-      </div>
-      <div className="parallax__crater">
-        <Image src="/assets/parallax/5Crater.svg" alt="" fill />
-      </div>
-      <div className="parallax__sun">
-        <Image src="/assets/parallax/6Sun.svg" alt="" fill />
-      </div> */}
       <img
+        ref={starsRef}
         className="parallax__stars"
         src="/assets/parallax/1Stars.svg"
         alt=""
