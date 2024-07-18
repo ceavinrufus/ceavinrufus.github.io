@@ -2,6 +2,7 @@ import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 import Image from "next/image";
 import Link from "next/link";
+import { WobbleCard } from "./ui/WobbleCard";
 
 const RecentProjects = () => {
   return (
@@ -9,23 +10,16 @@ const RecentProjects = () => {
       <h1 className="heading">
         A small selection of <span className="text-purple">my projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center gap-20 md:gap-32 lg:gap-16 mt-10">
+      <div className="flex flex-wrap items-center justify-center gap-2 mt-10">
         {projects.map((item) => (
-          <div
-            className="md:min-h-[24rem] lg:min-h-[30rem] min-h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+          <WobbleCard
             key={item.id}
+            className="flex items-center justify-center sm:w-96 w-[80vw] h-full flex-row"
           >
-            <PinContainer
-              title={item.link ? "Visit\xa0website" : `View\xa0on\xa0Github`}
-              href={item.link || item.github}
-            >
-              {(item.link || item.github) && (
-                <Link
-                  href={item.link || item.github || ""}
-                  target="_blank"
-                  className="absolute top-0 left-0 z-40 h-full w-full"
-                />
-              )}
+            {/* title={item.link ? "Visit\xa0website" : `View\xa0on\xa0Github`}
+              href={item.link || item.github} */}
+
+            <div className="flex flex-col h-full">
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[250px] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
@@ -42,9 +36,21 @@ const RecentProjects = () => {
                 />
               </div>
 
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                {item.title}
-              </h1>
+              <Link
+                href={item.link || item.github || ""}
+                className="flex gap-2 group justify-between"
+              >
+                <p className="font-bold group-hover:underline lg:text-2xl md:text-xl text-base line-clamp-1">
+                  {item.title}
+                </p>
+                <Image
+                  src={"/arrow.svg"}
+                  alt="arrow"
+                  className="z-10 group-hover:block"
+                  width={16}
+                  height={16}
+                />
+              </Link>
 
               <p
                 className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
@@ -114,8 +120,8 @@ const RecentProjects = () => {
                   </Link>
                 )}
               </div>
-            </PinContainer>
-          </div>
+            </div>
+          </WobbleCard>
         ))}
       </div>
     </section>
