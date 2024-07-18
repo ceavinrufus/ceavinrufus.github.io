@@ -1,5 +1,3 @@
-"use client";
-
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 import Image from "next/image";
@@ -28,7 +26,7 @@ const RecentProjects = () => {
                   className="absolute top-0 left-0 z-40 h-full w-full"
                 />
               )}
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[250px] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}

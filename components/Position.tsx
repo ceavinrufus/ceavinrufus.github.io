@@ -1,6 +1,6 @@
 import React from "react";
 
-const produceSpans = (text, animation) => {
+const produceSpans = (text: string, animation: string) => {
   return text.split("").map((letter, index) => (
     <span
       key={index}

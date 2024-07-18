@@ -2,7 +2,11 @@ import Image from "next/image";
 import Position from "./Position";
 import SpacemanCanvas from "./Spaceman";
 
-const Hero2 = ({ scrollContainer }) => {
+const Hero2 = ({
+  scrollContainer,
+}: {
+  scrollContainer: React.RefObject<HTMLDivElement>;
+}) => {
   return (
     <section className="parallax">
       <div className="parallax__content absolute top-[5%] sm:top-[10%] lg:top-[16%] w-full mx-auto lg:pl-[38vh] lg:pr-[30vh] xl:pl-96 xl:pr-72 2xl:px-40 3xl:px-60 flex flex-col lg:flex-row items-start z-10">

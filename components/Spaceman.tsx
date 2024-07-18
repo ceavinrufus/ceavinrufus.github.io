@@ -11,6 +11,8 @@ const Spaceman = ({ scale, position }) => {
   const { actions } = useAnimations(animations, spacemanRef);
 
   useEffect(() => {
+    if (!actions["Idle"]) return;
+
     actions["Idle"].play();
   }, [actions]);
 
@@ -26,7 +28,11 @@ const Spaceman = ({ scale, position }) => {
   );
 };
 
-const SpacemanCanvas = ({ scrollContainer }) => {
+const SpacemanCanvas = ({
+  scrollContainer,
+}: {
+  scrollContainer: React.RefObject<HTMLDivElement>;
+}) => {
   const [rotationX, setRotationX] = useState(0);
   const [rotationY, setRotationY] = useState(0);
   const [scale, setScale] = useState([2, 2, 2]);
@@ -34,6 +40,8 @@ const SpacemanCanvas = ({ scrollContainer }) => {
 
   useEffect(() => {
     const handleScroll = () => {
+      if (!scrollContainer.current) return;
+
       const scrollTop = scrollContainer.current.scrollTop;
       const rotationXValue = scrollTop * -0.0006;
       const rotationYValue = scrollTop * -0.00075;
@@ -84,11 +92,6 @@ const SpacemanCanvas = ({ scrollContainer }) => {
           angle={0.15}
           penumbra={1}
           intensity={2}
-        />
-        <hemisphereLight
-          skyColor="#b1e1ff"
-          groundColor="#000000"
-          intensity={1}
         />
 
         <Spaceman
