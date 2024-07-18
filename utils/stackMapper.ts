@@ -1,0 +1,16 @@
+export const stackMapper: { [key: string]: string } = {
+  "/supabase.svg": "Supabase",
+  "/next.svg": "NextJS",
+  "/ollama.svg": "Ollama",
+  "/fastapi.svg": "FastAPI",
+  "/tail.svg": "TailwindCSS",
+  "/ts.svg": "TypeScript",
+  "/shadcn.svg": "Shadcn",
+  "/c.svg": "Clerk",
+  "/re.svg": "ReactJS",
+  "/css.svg": "CSS",
+  "/js.svg": "JavaScript",
+  "/swiper.svg": "SwiperJS",
+  "/fm.svg": "Framer Motion",
+  "/html.svg": "HTML",
+};

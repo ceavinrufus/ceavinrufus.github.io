@@ -3,6 +3,14 @@ import { PinContainer } from "./ui/Pin";
 import Image from "next/image";
 import Link from "next/link";
 import { WobbleCard } from "./ui/WobbleCard";
+import { TechStackTooltip } from "./TechStackTooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { stackMapper } from "@/utils/stackMapper";
 
 const RecentProjects = () => {
   return (
@@ -72,12 +80,7 @@ const RecentProjects = () => {
                         transform: `translateX(-${5 * index + 2}px)`,
                       }}
                     >
-                      <Image
-                        src={"/assets/stackIcons" + icon}
-                        fill
-                        alt="icon5"
-                        className="p-2"
-                      />
+                      <TechStackTooltip image={icon} />
                     </div>
                   ))}
                   {item.iconLists.length >= 5 && (
@@ -88,14 +91,25 @@ const RecentProjects = () => {
                       }}
                     >
                       {item.iconLists.length == 5 ? (
-                        <Image
-                          src={"/assets/stackIcons" + item.iconLists[4]}
-                          fill
-                          alt="icon5"
-                          className="p-2"
-                        />
+                        <TechStackTooltip image={item.iconLists[4]} />
                       ) : (
-                        <p>{item.iconLists.length - 4}+</p>
+                        <TooltipProvider>
+                          <Tooltip delayDuration={100}>
+                            <TooltipTrigger asChild>
+                              <p className="p-2">
+                                {item.iconLists.length - 4}+
+                              </p>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>
+                                {item.iconLists
+                                  .slice(4)
+                                  .map((icon) => stackMapper[icon])
+                                  .join(", ")}
+                              </p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
                       )}
                     </div>
                   )}

@@ -103,7 +103,7 @@ export const WobbleCard = ({
       }}
     >
       <div className="grid will-change-transform origin-center transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] rounded-3xl hover:[--opacity:0.6] hover:[--duration:200ms] hover:[--easing:linear] hover:filter-none overflow-hidden border">
-        <div className="grid p-4 mix-blend-soft-light [clip-path:inset(0_0_0_0_round_var(--radius))]">
+        <div className="grid p-4 [clip-path:inset(0_0_0_0_round_var(--radius))]">
           <div className={cn("h-full w-full", className)}>{children}</div>
         </div>
       </div>
