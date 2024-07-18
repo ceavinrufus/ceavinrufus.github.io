@@ -33,7 +33,7 @@ const Spaceman = ({
       ref={spacemanRef}
       position={position}
       scale={scale}
-      rotation={[rotationX, rotationY, 0]}
+      rotation={[5, 1.2, 1]}
     >
       <primitive object={scene} />
     </mesh>
