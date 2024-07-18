@@ -266,9 +266,7 @@ const Monster = () => {
     loop();
   }, []);
 
-  return (
-    <canvas className="fixed top-0 left-0 w-full h-full" ref={canvasRef} />
-  );
+  return <canvas className="w-full h-full" ref={canvasRef} />;
 };
 
 export default Monster;

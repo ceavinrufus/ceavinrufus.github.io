@@ -146,6 +146,16 @@ const config = {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
+        textRotate1: {
+          "0%, 40%": { transform: "translate3d(0, 0%, 0) rotateX(0deg)" },
+          "60%, 100%": {
+            transform: "translate3d(0, -100%, 0) rotateX(-90deg)",
+          },
+        },
+        textRotate2: {
+          "0%, 40%": { transform: "translate3d(0, 100%, 0) rotateX(-90deg)" },
+          "60%, 100%": { transform: "translate3d(0, 0%, 0) rotateX(0deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -159,6 +169,8 @@ const config = {
         fifth: "moveInCircle 20s ease infinite",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        textRotate1: "textRotate1 2.4s infinite alternate",
+        textRotate2: "textRotate2 2.4s infinite alternate",
       },
     },
   },
