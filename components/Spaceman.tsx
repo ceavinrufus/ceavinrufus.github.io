@@ -5,8 +5,20 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 import CanvasLoader from "./Loader";
 
-const Spaceman = ({ scale, position }) => {
-  const spacemanRef = useRef();
+interface SpacemanProps {
+  scale: [number, number, number];
+  position: [number, number, number];
+  rotationX?: number;
+  rotationY?: number;
+}
+
+const Spaceman = ({
+  scale,
+  position,
+  rotationX = 0,
+  rotationY = 2.2,
+}: SpacemanProps) => {
+  const spacemanRef = useRef<any>();
   const { scene, animations } = useGLTF("/assets/3d/spaceman.glb");
   const { actions } = useAnimations(animations, spacemanRef);
 
@@ -21,22 +33,24 @@ const Spaceman = ({ scale, position }) => {
       ref={spacemanRef}
       position={position}
       scale={scale}
-      rotation={[0, 2.2, 0]}
+      rotation={[rotationX, rotationY, 0]}
     >
       <primitive object={scene} />
     </mesh>
   );
 };
 
-const SpacemanCanvas = ({
-  scrollContainer,
-}: {
+interface SpacemanCanvasProps {
   scrollContainer: React.RefObject<HTMLDivElement>;
-}) => {
+}
+
+const SpacemanCanvas = ({ scrollContainer }: SpacemanCanvasProps) => {
   const [rotationX, setRotationX] = useState(0);
   const [rotationY, setRotationY] = useState(0);
-  const [scale, setScale] = useState([2, 2, 2]);
-  const [position, setPosition] = useState([0.2, -0.7, 0]);
+  const [scale, setScale] = useState<[number, number, number]>([2, 2, 2]);
+  const [position, setPosition] = useState<[number, number, number]>([
+    0.2, -0.7, 0,
+  ]);
 
   useEffect(() => {
     const handleScroll = () => {
