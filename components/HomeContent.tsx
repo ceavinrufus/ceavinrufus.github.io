@@ -10,6 +10,7 @@ import Hero2 from "@/components/Hero2";
 import Monster from "@/components/Monster";
 import RecentProjects from "@/components/RecentProjects";
 import { TracingBeam } from "./ui/TracingBeam";
+import Tech from "./Tech";
 
 const HomeContent = () => {
   const wrapperRef = useRef(null);
@@ -20,6 +21,7 @@ const HomeContent = () => {
         {/* <Hero /> */}
         <TracingBeam className="relative max-w-7xl w-full sm:px-0 px-10">
           <Grid />
+          <Tech />
           <RecentProjects />
           <Experience />
           {/* <Clients /> */}
