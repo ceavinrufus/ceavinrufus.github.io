@@ -10,7 +10,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { stackMapper } from "@/utils/stackMapper";
+import stackMapper from "@/utils/stackMapper";
 
 const RecentProjects = () => {
   return (
@@ -104,7 +104,7 @@ const RecentProjects = () => {
                               <p>
                                 {item.iconLists
                                   .slice(4)
-                                  .map((icon) => stackMapper[icon])
+                                  .map((icon) => stackMapper(icon))
                                   .join(", ")}
                               </p>
                             </TooltipContent>

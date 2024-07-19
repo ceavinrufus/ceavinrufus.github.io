@@ -56,10 +56,8 @@ export const BentoGridItem = ({
     "NestJS",
     "MySQL",
     "TailwindCSS",
-    "VueJS",
   ];
   const rightLists = [
-    "Prisma",
     "Firebase",
     "ReactJS",
     "NextJS",

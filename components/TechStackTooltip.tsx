@@ -4,7 +4,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { stackMapper } from "@/utils/stackMapper";
+import stackMapper from "@/utils/stackMapper";
 import Image from "next/image";
 
 export function TechStackTooltip({ image }: { image: string }) {
@@ -20,7 +20,7 @@ export function TechStackTooltip({ image }: { image: string }) {
           />
         </TooltipTrigger>
         <TooltipContent>
-          <p>{stackMapper[image]}</p>
+          <p>{stackMapper(image)}</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
