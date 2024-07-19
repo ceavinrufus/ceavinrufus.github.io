@@ -1,4 +1,4 @@
-import { technologies } from "@/data";
+import { technologies } from "@/data/techStack";
 
 export default function stackMapper(icon: string) {
   return technologies.filter((technology) => {

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { technologies } from "@/data";
+import { technologies } from "@/data/techStack";
 import Image from "next/image";
 
 const Tech = () => {
