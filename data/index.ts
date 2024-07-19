@@ -104,7 +104,7 @@ export const projects = [
     title: "MovieHub: All Things Movies",
     des: "Dive into the world of cinema! Explore movie details, trailers, reviews, and recommendations—all in one place.",
     img: "/movie-hub.png",
-    iconLists: ["/re.svg", "/css.svg", "/js.svg", "/swiper.svg"],
+    iconLists: ["/re.svg", "/css.svg", "/js.svg"],
     link: "https://movie-hub-website.netlify.app/",
     github: "https://github.com/ceavinrufus/movie-hub",
   },

@@ -1,13 +1,11 @@
 "use client";
 
 import React, { useRef } from "react";
-import Clients from "@/components/Clients";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import Hero2 from "@/components/Hero2";
-import Monster from "@/components/Monster";
 import RecentProjects from "@/components/RecentProjects";
 import { TracingBeam } from "./ui/TracingBeam";
 import Tech from "./Tech";
@@ -24,7 +22,6 @@ const HomeContent = () => {
           <Tech />
           <RecentProjects />
           <Experience />
-          {/* <Clients /> */}
           <Footer />
         </TracingBeam>
       </div>

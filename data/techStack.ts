@@ -29,6 +29,10 @@ export const technologies = [
     icon: "/tail.svg",
   },
   {
+    name: "SCSS",
+    icon: "/scss.svg",
+  },
+  {
     name: "Expo",
     icon: "/expo.svg",
   },
@@ -130,10 +134,10 @@ export const technologies = [
     name: "Redux",
     icon: "/redux.png",
   },
-  {
-    name: "Swiper",
-    icon: "/swiper.svg",
-  },
+  // {
+  //   name: "Swiper",
+  //   icon: "/swiper.svg",
+  // },
   {
     name: "Framer Motion",
     icon: "/fm.svg",

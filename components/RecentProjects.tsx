@@ -97,7 +97,7 @@ const RecentProjects = () => {
                         <TooltipProvider>
                           <Tooltip delayDuration={100}>
                             <TooltipTrigger asChild>
-                              <p className="p-2">
+                              <p className="text-xs lg:text-base">
                                 {item.iconLists.length - 4}+
                               </p>
                             </TooltipTrigger>
