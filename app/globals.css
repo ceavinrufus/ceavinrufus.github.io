@@ -153,13 +153,18 @@
   z-index: 2;
 }
 
-.parallax__planets {
-  --parallax-speed: 290;
+.parallax__sun {
+  --parallax-speed: 270;
   z-index: 3;
 }
 
-.parallax__sun {
+.parallax__monster {
   --parallax-speed: 270;
+  z-index: 3;
+}
+
+.parallax__planets {
+  --parallax-speed: 290;
   z-index: 4;
 }
 

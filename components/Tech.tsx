@@ -1,6 +1,5 @@
 import React from "react";
 
-import { TechStackTooltip } from "./TechStackTooltip";
 import { technologies } from "@/data";
 import Image from "next/image";
 

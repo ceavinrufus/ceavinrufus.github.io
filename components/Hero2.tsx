@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Position from "./Position";
 import SpacemanCanvas from "./Spaceman";
+import Monster from "./Monster";
 
 const Hero2 = ({
   scrollContainer,
@@ -12,7 +13,7 @@ const Hero2 = ({
   const handleScroll = () => {
     if (starsRef.current) {
       const scrollPosition = window.scrollY;
-      const scale = 1 + scrollPosition / 3000; // Adjust the divisor to control the zoom speed
+      const scale = 1.5 - scrollPosition / 3000; // Adjust the divisor to control the zoom speed
       starsRef.current.style.transform = `scale(${scale})`;
     }
   };
@@ -35,12 +36,12 @@ const Hero2 = ({
         </div>
       </div>
 
-      <img
+      {/* <img
         ref={starsRef}
         className="parallax__stars"
         src="/assets/parallax/1Stars.svg"
         alt=""
-      />
+      /> */}
       <img
         className="parallax__planets"
         src="/assets/parallax/2Planets.svg"
@@ -62,6 +63,12 @@ const Hero2 = ({
         alt=""
       />
       <img className="parallax__sun" src="/assets/parallax/6Sun.svg" alt="" />
+      <div
+        ref={starsRef}
+        className="parallax__monster scale-150 fixed top-0 left-0"
+      >
+        <Monster />
+      </div>
       <SpacemanCanvas scrollContainer={scrollContainer} />
     </section>
   );
