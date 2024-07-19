@@ -1,9 +1,11 @@
 export const navItems = [
   { name: "Home", icon: "/home.svg", link: "" },
   { name: "About", icon: "/about.svg", link: "#about" },
+  { name: "Tech Stacks", icon: "/tech.svg", link: "#tech" },
   { name: "Projects", icon: "/projects.svg", link: "#projects" },
   // { name: "Testimonials", icon: "/testi.svg", link: "#testimonials" },
-  { name: "Contact", icon: "/contact.svg", link: "#contact" },
+  { name: "Experience", icon: "/experience.svg", link: "#experience" },
+  // { name: "Contact", icon: "/contact.svg", link: "#contact" },
 ];
 
 export const gridItems = [

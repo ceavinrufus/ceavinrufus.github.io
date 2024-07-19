@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Tech = () => {
   return (
-    <section id="projects" className="py-20">
+    <section id="tech" className="py-20">
       <h1 className="heading">
         Tools and <span className="text-purple">tech stacks</span> that I used
       </h1>

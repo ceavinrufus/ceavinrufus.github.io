@@ -56,6 +56,9 @@ export const BentoGridItem = ({
     "NestJS",
     "MySQL",
     "TailwindCSS",
+    "Ollama",
+    "ThreeJS",
+    "Redux",
   ];
   const rightLists = [
     "Firebase",
@@ -65,6 +68,8 @@ export const BentoGridItem = ({
     "PostgreSQL",
     "Supabase",
     "Prisma",
+    "Docker",
+    "React Native",
   ];
 
   const handleCopy = () => {
@@ -144,10 +149,10 @@ export const BentoGridItem = ({
                     {item}
                   </span>
                 ))}
-                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
+                <span className="md:py-4 md:px-3 rounded-lg py-1 text-center bg-[#10132e] opacity-50 lg:opacity-100" />
               </div>
               <div className="flex flex-col gap-3 lg:gap-8">
-                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
+                <span className="md:py-4 md:px-3 rounded-lg py-1 text-center bg-[#10132e] opacity-50 lg:opacity-100" />
                 {rightLists.map((item) => (
                   <span
                     key={item}

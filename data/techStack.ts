@@ -89,6 +89,10 @@ export const technologies = [
   },
   // Database
   {
+    name: "Prisma",
+    icon: "/prisma.svg",
+  },
+  {
     name: "MySQL",
     icon: "/mysql.svg",
   },
