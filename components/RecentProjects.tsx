@@ -46,18 +46,19 @@ const RecentProjects = () => {
 
               <Link
                 href={item.link || item.github || ""}
-                className="flex gap-2 group justify-between"
+                className="flex gap-2 group justify-between items-center"
               >
                 <p className="font-bold group-hover:underline lg:text-2xl md:text-xl text-base line-clamp-1">
                   {item.title}
                 </p>
-                <Image
-                  src={"/arrow.svg"}
-                  alt="arrow"
-                  className="z-10 group-hover:block"
-                  width={16}
-                  height={16}
-                />
+                <div className="relative md:size-4 size-3">
+                  <Image
+                    src={"/arrow.svg"}
+                    alt="arrow"
+                    className="z-10 group-hover:block"
+                    fill
+                  />
+                </div>
               </Link>
 
               <p
@@ -121,7 +122,7 @@ const RecentProjects = () => {
                     target="_blank"
                     className="border border-white/[.2] rounded-full z-50 bg-black flex justify-center items-center p-2 gap-2"
                   >
-                    <p className="flex md:text-xs text-sm text-purple">
+                    <p className="flex text-xs md:text-sm  text-purple">
                       View on Github
                     </p>
                     <Image
