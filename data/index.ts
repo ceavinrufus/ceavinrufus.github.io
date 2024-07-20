@@ -95,7 +95,7 @@ export const projects = [
     title: "Artificier: AI Image Editing SaaS",
     des: "An image editing SaaS with AI features and a payments and credits system using the latest tech stack.",
     img: "/artificier.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/shadcn.svg", "/c.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/shadcn.svg", "/clerk.svg"],
     link: "https://artificier.vercel.app/",
     github: "https://github.com/ceavinrufus/artificier",
   },
@@ -131,7 +131,7 @@ export const projects = [
   //   title: "Yoom - Video Conferencing App",
   //   des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
   //   img: "/p2.png",
-  //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/s.svg", "/c.svg"],
+  //   iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/s.svg", "/clerk.svg"],
   //   link: "https://github.com/ceavinrufus/zoom-clone",
   // },
 ];
