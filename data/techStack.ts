@@ -86,6 +86,15 @@ export const technologies = [
     name: "Supabase",
     icon: "/supabase.svg",
   },
+  // Web3
+  {
+    name: "Solidity",
+    icon: "/solidity.svg",
+  },
+  {
+    name: "Hardhat",
+    icon: "/hardhat.svg",
+  },
   // CMS
   {
     name: "DatoCMS",
