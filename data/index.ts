@@ -41,13 +41,13 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
+    title: "Perfection.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
+    imgClassName: "absolute right-0 bottom-0 h-2/3 lg:h-1/2",
+    titleClassName: "justify-start lg:-translate-y-3",
+    img: "/image.png",
+    spareImg: "",
   },
 
   {
