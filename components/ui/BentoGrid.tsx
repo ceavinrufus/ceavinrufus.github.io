@@ -88,13 +88,24 @@ export const BentoGridItem = ({
         background: "rgb(4,7,29)",
         backgroundColor:
           id === 4
-            ? "#212121"
+            ? "#24273A"
             : "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
-        <div className="w-full h-full absolute">
-          {img && (
+        <div className={`w-full h-full absolute`}>
+          {img && id === 4 && (
+            <div className={cn(imgClassName, "bg-[rgb(4,7,29)]")}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                style={{ mixBlendMode: "screen" }}
+                src={img}
+                alt={img}
+                className={cn("h-full w-full object-cover object-center")}
+              />
+            </div>
+          )}
+          {img && id !== 4 && (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={img}
