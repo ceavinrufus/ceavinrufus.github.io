@@ -67,6 +67,10 @@ export const technologies = [
     icon: "/express.svg",
   },
   {
+    name: "Go",
+    icon: "/go.svg",
+  },
+  {
     name: "Nest",
     icon: "/nest.svg",
   },
