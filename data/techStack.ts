@@ -177,6 +177,10 @@ export const technologies = [
     icon: "/c.svg",
   },
   {
+    name: "C++",
+    icon: "/c++.svg",
+  },
+  {
     name: "Python",
     icon: "/python.svg",
   },
