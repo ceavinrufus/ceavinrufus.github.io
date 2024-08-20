@@ -144,6 +144,10 @@ export const technologies = [
     icon: "/three.svg",
   },
   {
+    name: "React Query",
+    icon: "/rquery.svg",
+  },
+  {
     name: "Redux",
     icon: "/redux.png",
   },
