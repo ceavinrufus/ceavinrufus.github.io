@@ -4,7 +4,7 @@ export const navItems = [
   { name: "Tech Stacks", icon: "/tech.svg", link: "#tech" },
   { name: "Projects", icon: "/projects.svg", link: "#projects" },
   // { name: "Testimonials", icon: "/testi.svg", link: "#testimonials" },
-  { name: "Experience", icon: "/experience.svg", link: "#experience" },
+  { name: "Experiences", icon: "/experience.svg", link: "#experiences" },
   // { name: "Contact", icon: "/contact.svg", link: "#contact" },
 ];
 
@@ -179,7 +179,7 @@ export const companies = [
   },
 ];
 
-export const workExperience = [
+export const services = [
   {
     id: 1,
     title: "Full-stack Engineer Intern",
