@@ -18,15 +18,15 @@ const Position = () => {
       <div className="absolute inset-0 top-[-30px] sm:top-[-10px] lg:top-0 flex flex-col">
         <div
           className="text first absolute right-0 md:right-1 lg:left-2 2xl:left-3 flex"
-          aria-label="Web Developer"
+          aria-label="Software Developer"
         >
-          {produceSpans("Web Developer", "animate-textRotate1")}
+          {produceSpans("Software Developer", "animate-textRotate1")}
         </div>
         <div
           className="text second absolute right-0 md:right-1 lg:left-2 2xl:left-3 flex"
           aria-label="Mobile App Developer"
         >
-          {produceSpans("Mobile App Developer", "animate-textRotate2")}
+          {produceSpans("Blockchain Developer", "animate-textRotate2")}
         </div>
       </div>
     </div>
