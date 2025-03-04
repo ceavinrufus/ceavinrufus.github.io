@@ -1,19 +1,18 @@
 "use client";
 
 import { useEffect } from "react";
-import { useRouter, useParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { supabase } from "@/utils/supabaseClient";
 
 export default function Page() {
   const router = useRouter();
-  const params = useParams();
 
   useEffect(() => {
     async function getUrlFromSlug() {
       const { data, error } = await supabase
         .from("urls")
         .select()
-        .eq("short_url", params.slug)
+        .eq("short_url", "spotify")
         .single();
 
       if (error) {
@@ -26,7 +25,7 @@ export default function Page() {
         await supabase
           .from("urls")
           .update({ clicks: data.clicks + 1 })
-          .eq("short_url", params.slug);
+          .eq("short_url", "spotify");
         router.push(data.long_url);
       } else {
         // Handle case when no data is found
@@ -36,7 +35,7 @@ export default function Page() {
     }
 
     getUrlFromSlug();
-  }, [router, params.slug]);
+  }, [router]);
 
   return null;
 }
