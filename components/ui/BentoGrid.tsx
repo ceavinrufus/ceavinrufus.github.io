@@ -56,7 +56,7 @@ export const BentoGridItem = ({
     "NestJS",
     "MySQL",
     "TailwindCSS",
-    "Ollama",
+    "Go",
     "ThreeJS",
     "Redux",
   ];
@@ -66,7 +66,7 @@ export const BentoGridItem = ({
     "NextJS",
     "FastAPI",
     "PostgreSQL",
-    "Supabase",
+    "Zustand",
     "Prisma",
     "Docker",
     "React Native",
