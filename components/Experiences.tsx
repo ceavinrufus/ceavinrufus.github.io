@@ -8,13 +8,14 @@ const ExperienceTitle = ({
   type = "Internship",
 }: {
   role: string;
-  company: string;
+  company?: string;
   type?: string;
 }) => {
   return (
     <div className="mb-4">
       <p className="text-neutral-800 dark:text-neutral-200 text-base md:text-xl lg:text-2xl font-normal">
-        {role} @ <span className="text-purple"> {company}</span>
+        {role} {company ? "@" : ""}{" "}
+        <span className="text-purple"> {company}</span>
       </p>
       <p className="text-sm md:text-lg lg:text-xl text-white-100 font-semibold">
         {type}
@@ -34,14 +35,97 @@ const ExperienceListContent = ({ children }: { children: React.ReactNode }) => {
 export function Experiences() {
   const data = [
     {
-      title: "October 2024 - Present",
+      title: "August 2021 - Present",
+      content: (
+        <div>
+          <ExperienceTitle role="Software Engineer" type="Freelance" />
+          <div className="mb-8">
+            <ExperienceListContent>
+              ✅ Delivered custom web solutions for 10+ clients across personal,
+              organizational, and event-based projects.
+            </ExperienceListContent>
+            <ExperienceListContent>
+              ✅ Developed responsive websites and web applications tailored to
+              diverse client requirements and specifications.
+            </ExperienceListContent>
+            <ExperienceListContent>
+              ✅ Built event management systems and organizational websites to
+              enhance digital presence and functionality.
+            </ExperienceListContent>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Jun 2025 - Present",
+      content: (
+        <div>
+          <ExperienceTitle role="Software Engineer" company="GDP Labs" />
+          <div className="mb-8"></div>
+        </div>
+      ),
+    },
+    {
+      title: "May 2025 - Aug 2025",
+      content: (
+        <div>
+          <ExperienceTitle role="Research Staff" company="Systatum" />
+          <div className="mb-8">
+            <ExperienceListContent>
+              ✅ Research on Gara programming language
+            </ExperienceListContent>
+            <ExperienceListContent>
+              ✅ Built custom parser for the Gara programming language using
+              Golang
+            </ExperienceListContent>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "October 2024 - May 2025",
       content: (
         <div>
           <ExperienceTitle
             role="Software & Blockchain Developer"
             company="DeTrip"
           />
-          <div className="mb-8"></div>
+          <div className="mb-8">
+            <ExperienceListContent>
+              ✅ Implemented an anonymous reservation system using decentralized
+              Self-Sovereign Identity and ZKProof to enhance the security of the
+              platform, improving privacy for 100% of users.
+            </ExperienceListContent>
+            <ExperienceListContent>
+              ✅ Developed smart contract using Solidity to handle
+              cryptocurrency payment and dispute process in the platform.
+            </ExperienceListContent>
+            <ExperienceListContent>
+              ✅ Created and executed unit tests with Jest to ensure the
+              reliability and correctness of smart contracts and backend APIs,
+              achieving 99% test coverage and minimizing regressions.
+            </ExperienceListContent>
+            <ExperienceListContent>
+              ✅ Designed and developed a new microservice to manage
+              host-specific features.
+            </ExperienceListContent>
+            <ExperienceListContent>
+              ✅ Deployed microservices in Kubernetes, achieving seamless
+              scalability and high availability across all services.
+            </ExperienceListContent>
+            <ExperienceListContent>
+              ✅ Doubled website performance for better speed and UX.
+            </ExperienceListContent>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <Image
+              src="/assets/experienceImages/detrip.jpg"
+              alt="DeTrip"
+              width={500}
+              height={300}
+              className="rounded-lg object-cover w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
         </div>
       ),
     },
@@ -52,6 +136,7 @@ export function Experiences() {
           <ExperienceTitle
             role="Software Engineer"
             company="Bank Rakyat Indonesia (BRI)"
+            type="Contract"
           />
           <div className="mb-8">
             <ExperienceListContent>
@@ -95,6 +180,7 @@ export function Experiences() {
           <ExperienceTitle
             role="Software Engineer"
             company="Telkom Indonesia"
+            type="Internship"
           />
           <div className="mb-8">
             <ExperienceListContent>
@@ -142,7 +228,7 @@ export function Experiences() {
         Changelog from <span className="text-purple">my journey</span>
       </h1>
       <p className="text-center text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
-        I&apos;ve been working on IT field for the past 2 years. Here&apos;s a
+        I&apos;ve been working on IT field for the past 4 years. Here&apos;s a
         highlight of my journey.
       </p>
       <Timeline data={data} />
