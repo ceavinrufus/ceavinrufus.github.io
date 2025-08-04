@@ -147,14 +147,46 @@ const config = {
           },
         },
         textRotate1: {
-          "0%, 40%": { transform: "translate3d(0, 0%, 0) rotateX(0deg)" },
-          "60%, 100%": {
+          "0%, 33.33%": {
+            transform: "translate3d(0, 0%, 0) rotateX(0deg)",
+            opacity: "1",
+          },
+          "41.66%, 74.99%": {
             transform: "translate3d(0, -100%, 0) rotateX(-90deg)",
+            opacity: "0",
+          },
+          "83.32%, 100%": {
+            transform: "translate3d(0, -200%, 0) rotateX(-180deg)",
+            opacity: "0",
           },
         },
         textRotate2: {
-          "0%, 40%": { transform: "translate3d(0, 100%, 0) rotateX(-90deg)" },
-          "60%, 100%": { transform: "translate3d(0, 0%, 0) rotateX(0deg)" },
+          "0%, 24.99%": {
+            transform: "translate3d(0, 100%, 0) rotateX(-90deg)",
+            opacity: "0",
+          },
+          "60%, 66.66%": {
+            transform: "translate3d(0, 0%, 0) rotateX(0deg)",
+            opacity: "1",
+          },
+          "74.99%, 100%": {
+            transform: "translate3d(0, -100%, 0) rotateX(-90deg)",
+            opacity: "0",
+          },
+        },
+        textRotate3: {
+          "0%, 30%": {
+            transform: "translate3d(0, -100%, 0) rotateX(-90deg)",
+            opacity: "0",
+          },
+          "31%, 75%": {
+            transform: "translate3d(0, 100%, 0) rotateX(-90deg)",
+            opacity: "0",
+          },
+          "76%, 100%": {
+            transform: "translate3d(0, 0%, 0) rotateX(0deg)",
+            opacity: "1",
+          },
         },
       },
       animation: {
@@ -169,8 +201,9 @@ const config = {
         fifth: "moveInCircle 20s ease infinite",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
-        textRotate1: "textRotate1 2.4s infinite alternate",
-        textRotate2: "textRotate2 2.4s infinite alternate",
+        textRotate1: "textRotate1 6s infinite",
+        textRotate2: "textRotate2 6s infinite",
+        textRotate3: "textRotate3 6s infinite",
       },
     },
   },
