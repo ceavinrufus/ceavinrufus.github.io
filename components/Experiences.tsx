@@ -35,28 +35,6 @@ const ExperienceListContent = ({ children }: { children: React.ReactNode }) => {
 export function Experiences() {
   const data = [
     {
-      title: "August 2021 - Present",
-      content: (
-        <div>
-          <ExperienceTitle role="Software Engineer" type="Freelance" />
-          <div className="mb-8">
-            <ExperienceListContent>
-              ✅ Delivered custom web solutions for 10+ clients across personal,
-              organizational, and event-based projects.
-            </ExperienceListContent>
-            <ExperienceListContent>
-              ✅ Developed responsive websites and web applications tailored to
-              diverse client requirements and specifications.
-            </ExperienceListContent>
-            <ExperienceListContent>
-              ✅ Built event management systems and organizational websites to
-              enhance digital presence and functionality.
-            </ExperienceListContent>
-          </div>
-        </div>
-      ),
-    },
-    {
       title: "Jun 2025 - Present",
       content: (
         <div>
